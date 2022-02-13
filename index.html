@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	<meta name="description"
+		content="京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。">
+	<meta name="Keywords" content="网上购物,网上商城,家电,手机,电脑,服装,居家,母婴,美妆,个护,食品,生鲜,京东">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./font/css/all.css">
+	<link rel="stylesheet" href="./font/css/iconfont.css">
+</head>
+
+<body>
+
+	<div class="top-bar-wrapper">
+		<div class="top-bar">
+			<div class="location">
+				<a href="#">
+					<i class="iconfont iconfont-diqu" style="font-size: 14px;"></i>
+					<span>安徽</span>
+				</a>
+				<div class="dropdown-layer">
+					<ul class="city-list">
+						<li><a href="#">北京</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">天津</a></li>
+						<li><a href="#">南京</a></li>
+						<li><a href="#">安徽</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">北京</a></li>
+					</ul>
+
+				</div>
+			</div>
+			<ul class="shortcut">
+				<li><a href="javascript:">你好,请登录 </a><a href="#" class="highlight">免费注册</a></li>
+				<li><a href="javascript:">我的订单</a></li>
+				<li><a href="javascript:">我的京东</a><i class="icon-xiala iconfont"></i></li>
+				<li><a href="javascript:">京东会员</a></li>
+				<li><a href="javascript:" class="highlight">政府采购</a><i class="icon-xiala iconfont"></i></li>
+				<li><span>客户服务</span><i class="icon-xiala iconfont"></i></li>
+				<li><span>网站导航</span><i class="icon-xiala iconfont"></i></li>
+				<li><span>手机京东</span></li>
+				<li><a href="javascript:">网站无障碍</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<header>
+		<div>
+			<div class="logo">
+				<a href="#">
+					<img class="logo-img" src="./img/logo.png" alt="logo">
+					<img class="logo-gif" src="./img/logo.gif" alt="logo-gif">
+					<!--图片切换脚本-->
+					<script>
+						// img鼠标移入 => i.改变图片ii.移出后执行换回图片
+						let img = document.querySelector(".logo .logo-img");
+						let gif = document.querySelector(".logo .logo-gif");
+						document.querySelector(".logo").onmouseover = function () {
+							img.style.opacity = "0";
+							gif.style.opacity = "1";
+							this.onmouseout = function () {
+								img.style.opacity = "1";
+								gif.style.opacity = "0";
+							};
+						}
+
+
+					</script>
+				</a>
+			</div>
+			<div class="center-box">
+				<div class="search-form">
+					<div class="search-box">
+						<input type="text" placeholder="请输入您想要的商品" aria-label="搜索">
+						<i class="iconfont icon-zhaoxiangji"></i>
+						<button class="search-btn" aria-label="搜索"><i class="iconfont icon-sousuo"
+								style="font-size: 15px;"></i></button>
+					</div>
+					<div class="shaping-box">
+						<i class="iconfonts icon-shaping"></i>
+						<a href="javascript:" class="deepred">我的购物车</a>
+						<div class="dropdown-layer">loading</div>
+					</div>
+				</div>
+				<ul class="hot-search-list">
+					<li><a href="#">健康甜蜜礼</a></li>
+					<li><a href="#">钟表</a></li>
+					<li><a href="#">让爱深刻</a></li>
+					<li><a href="#">让爱深刻</a></li>
+					<li><a href="#">让爱深刻</a></li>
+					<li><a href="#">让爱深刻</a></li>
+					<li><a href="#">让爱深刻</a></li>
+				</ul>
+				<nav>
+					<ul>
+						<li><a href="#" class="redhighlight">秒杀</a></li>
+						<li><a href="#" class="redhighlight">优惠券</a></li>
+						<li><a href="#">PLUS会员</a></li>
+						<li><a href="#">品牌闪购</a></li>
+						<li><a href="#">拍卖</a></li>
+						<li><a href="#">京东家电</a></li>
+						<li><a href="#">京东超市</a></li>
+						<li><a href="#">京东生鲜</a></li>
+						<li><a href="#">京东国际</a></li>
+						<li><a href="#">京东云</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="right-box">
+				广告位
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="top">
+			<!--左侧广告-->
+			<div class="left">
+				<a href="#"></a>
+			</div>
+			<!--左侧导航栏-->
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="#">家用电器</a>
+						<!--隐藏框-->
+						<div class="item-card">
+							<!--左边的选项-->
+							<div class="item-card-left">
+								<!--上面的黑按钮-->
+								<ul>
+									<!--家电馆家电专卖店家电服务企业采购商用电器高价回收-->
+									<li><a href="javascript:">家电馆 ></a></li>
+									<li><a href="javascript:">家电专卖店 ></a></li>
+									<li><a href="javascript:">家电服务 ></a></li>
+									<li><a href="javascript:">企业采购 ></a></li>
+									<li><a href="javascript:">商用电器 ></a></li>
+									<li><a href="javascript:">高价回收 ></a></li>
+								</ul>
+								<!--下面的商品列表框-->
+								<div class="cate_detail">
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="javascript:">电视 ></a></dt>
+										<dd>
+											<a href="javascript:">全面屏电视</a>
+											<a href="javascript:">教育电视</a>
+											<a href="javascript:">OLED电视</a>
+											<a href="javascript:">智慧屏</a>
+											<a href="javascript:">4K超清电视</a>
+											<a href="javascript:">55英寸</a>
+											<a href="javascript:">65英寸</a>
+											<a href="javascript:">电视配件</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<!--图片框-->
+							<div>
+								<div style="background-color: #7b20da;width: 100px;height: 100px;"></div>
+								<div style="background-color: #2d2d2d;width: 100px;height: 100px;"></div>
+								<div style="background-color: #8c9fac;width: 100px;height: 100px;"></div>
+								<div style="background-color: #33bb00;width: 100px;height: 100px;"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+					<li>
+						<a href="#">家用电器</a>
+						<div></div>
+					</li>
+				</ul>
+			</div>
+			<!--图片轮播图-->
+			<div class="img-pool">
+				<!--`<`按钮-->
+				<button class="turn-left iconfont icon-shangyiji"></button>
+				<div class="img-list">
+					<ul>
+						<li><a href="javascript:"><img src="./img/1.jpg" alt="img-list"></a></li>
+						<li><a href="javascript:"><img src="./img/2.jpg" alt="img-list"></a></li>
+						<li><a href="javascript:"><img src="./img/3.jpg" alt="img-list"></a></li>
+						<li><a href="javascript:"><img src="./img/4.jpg" alt="img-list"></a></li>
+						<li><a href="javascript:"><img src="./img/5.jpg" alt="img-list"></a></li>
+						<li><a href="javascript:"><img src="./img/6.jpg" alt="img-list"></a></li>
+						<li><a href="javascript:"><img src="./img/7.jpg" alt="img-list"></a></li>
+						<li><a href="javascript:"><img src="./img/8.jpg" alt="img-list"></a></li>
+					</ul>
+				</div>
+				<button class="turn-right icon-xiayiji iconfont"></button>
+				<ul class="pointer">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!--图片切换脚本-->
+			<script>
+				let imgList = document.querySelectorAll(".img-pool .img-list li");
+				let cur = 0;
+				let imgNumber = imgList.length;
+				let points = document.querySelectorAll(".pointer li");
+				let run = true;
+
+				//切换图片
+				function imgTurn(curIndex, nextIndex, imgList) {
+					imgList[curIndex].style.opacity = "0";
+					imgList[nextIndex].style.opacity = "1";
+					points[curIndex].className = "";
+					points[nextIndex].className = "active";
+
+				}
+
+				//自动换图功能
+				window.setInterval(() => {
+					if (run) {//如果未暂停
+						let next = (cur + 1) % imgNumber;
+						imgTurn(cur, next, imgList);
+						cur = next;
+						// console.log(cur);
+					}
+				},
+					2000
+				);
+
+				//上一个按钮事件
+				document.querySelector(".img-pool .turn-left").onclick = () => {
+					let next = cur === 0 ? imgNumber - 1 : cur - 1;
+					imgTurn(cur, next, imgList);
+					cur = next;
+				}
+
+				//下一个按钮事件
+				document.querySelector(".img-pool .turn-right").onclick = () => {
+					let next = (cur + 1) % imgNumber;
+					imgTurn(cur, next, imgList);
+					cur = next;
+				}
+
+				//TODO : 选中小点切换图片
+				points.forEach((p, index) => {
+					//绑定鼠标移入事件
+					p.onmouseover = () => {
+						//暂时暂停计时器
+						run = false;
+						//切换图片
+						imgTurn(cur, index, imgList);
+						//修改当前位置
+						cur = index;
+					};
+					//绑定移出事件,当鼠标移出时继续计时器
+					p.onmouseout = () => run = true;
+					// console.log(p, index);
+					// console.log(true)
+				});
+
+			</script>
+			<!--三张图片-->
+			<div class="img-show">
+				<button class="turn-left  iconfont icon-shangyiji"></button>
+				<ul class="img-list">
+					<li><a href="#"></a><img class="imgs" src="./img/list2/01.webp" alt="img-list"></li>
+					<li><a href="#"></a><img class="imgs" src="./img/list2/02.webp" alt="img-list"></li>
+					<li><a href="#"></a><img class="imgs" src="./img/list2/03.webp" alt="img-list"></li>
+				</ul>
+				<button class="turn-right icon-xiayiji iconfont"></button>
+			</div>
+			<!--用户面板-->
+			<div class="personal-wrapper">
+				<!-- 个人 -->
+				<ul class="personal">
+					<!-- 头像 -->
+					<li class="hp">
+						<a href="#"><img src="./img/下载 (1).png" alt=""></a>
+					</li>
+					<li class="rigester">
+						<p>Hi~欢迎逛京东!</p>
+						<p>登录 | 注册</p>
+					</li>
+					<li class="new">新人福利</li>
+					<li class="plus">PULS会员</li>
+				</ul>
+				<!-- 京东新闻 -->
+				<ul class="jd-news">
+					<!-- 新闻 -->
+					<li class="news">
+						<h3>京东快报</h3>
+						<span>更多 ></span>
+					</li>
+					<!-- 热点 -->
+					<li class="hotspot">
+						<span>热议</span>
+						<p>想提升家具格调却怎么怎么</p>
+					</li>
+					<li class="hotspot">
+						<span>推介</span>
+						<p>想提升家具格调却怎么怎么</p>
+					</li>
+					<li class="hotspot">
+						<span>热门</span>
+						<p>想提升家具格调却怎么怎么</p>
+					</li>
+					<li class="hotspot">
+						<span>最新</span>
+						<p>想提升家具格调却怎么怎么</p>
+					</li>
+				</ul>
+				<!-- 服务 -->
+				<table class="service">
+					<tr>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se1.png" alt="">
+								<img src="./img/s1.png" alt="">
+							</a>
+							<a href="#">话费</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se2.png" alt="">
+								<img src="./img/s2.png" alt="">
+							</a>
+							<a href="#">机票</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se3.png" alt="">
+								<img src="./img/s3.png" alt="">
+							</a>
+							<a href="#">酒店</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se4.png" alt="">
+								<img src="./img/s4.png" alt="">
+							</a>
+							<a href="#">游戏</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se5.png" alt="">
+								<img src="./img/s5.png" alt="">
+							</a>
+							<a href="#">加油卡</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se6.png" alt="">
+								<img src="./img/s6.png" alt="">
+							</a>
+							<a href="#">火车票</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se7.png" alt="">
+								<img src="./img/s7.png" alt="">
+							</a>
+							<a href="#">众筹</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se8.png" alt="">
+								<img src="./img/s8.png" alt="">
+							</a>
+							<a href="#">理财</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se9.png" alt="">
+								<img src="./img/s9.png" alt="">
+							</a>
+							<a href="#">白条</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se10.png" alt="">
+								<img src="./img/s10.png" alt="">
+							</a>
+							<a href="#">电影票</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se11.png" alt="">
+								<img src="./img/s11.png" alt="">
+							</a>
+							<a href="#">企业购</a>
+						</td>
+						<td>
+							<a href="#" class="service-i">
+								<img src="./img/se12.png" alt="">
+								<img src="./img/s12.png" alt="">
+							</a>
+							<a href="#">礼品卡</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- 京东秒杀 -->
+		<div class="sec-kill">
+			<div class="sec-kill-inner">
+				<!-- 秒杀时间 -->
+				<a href="#" class="sec-kill-time">
+					<p class="kill">京东秒杀</p>
+					<p class="tm"><strong>18:00</strong>点场 倒计时</p>
+					<div class="time">
+						<strong>23</strong>
+						<span>:</span>
+						<strong>04</strong>
+						<span>:</span>
+						<strong>02</strong>
+					</div>
+				</a>
+
+				<!--秒杀倒计时-->
+				<script>
+					//数字转字符串补0
+					function padNumber(number, fill) {
+						let new_number = number * (number > 0 ? 1 : -1),
+							len = ('' + new_number).length;
+						return (number >= 0 ? '' : '-') + (Array(
+							fill > len ? fill - len + 1 || 0 : 0
+						).join(0) + new_number);
+					}
+
+					//获取time
+					let time = document.querySelectorAll(".sec-kill-time .time strong");
+					//每秒-1
+					window.setInterval(function () {
+						let h = Number(time[0].innerHTML);
+						let min = Number(time[1].innerHTML);
+						let sec = Number(time[2].innerHTML);
+						if (sec - 1 >= 0) {
+							sec--;
+							time[2].innerHTML = padNumber(sec, 2);
+							// console.log(time[2].innerHTML);
+						} else if (min - 1 >= 0) {
+							min--;
+							time[1].innerHTML = padNumber(min, 2);
+							time[2].innerHTML = "59";
+							// console.log(time[1].innerHTML);
+						} else if (h - 1 >= 0) {
+							h--;
+							time[0].innerHTML = padNumber(h, 2);
+							time[1].innerHTML = "59";
+							time[2].innerHTML = "59";
+							// console.log(time[0].innerHTML);
+						}
+					}, 1000);
+
+				</script>
+
+				<!-- 秒杀商品 -->
+				<ul class="sec-kill-goods">
+					<li>
+						<a href="#">
+							<img src="./img/seckill.jpg.webp" alt="">
+						</a>
+						<p>农村乡村别墅,农村别墅三层楼房,艺品专业别墅设计师量身定制设计</p>
+						<!-- 价格 -->
+						<div class="sec-price">
+							<i>¥</i>
+							<span>9.99</span>
+						</div>
+					</li>
+
+					<li>
+						<a href="#">
+							<img src="./img/seckill.jpg.webp" alt="">
+						</a>
+						<p>农村乡村别墅,农村别墅三层楼房,艺品专业别墅设计师量身定制设计</p>
+						<div class="sec-price">
+							<i>¥</i>
+							<span>9.99</span>
+						</div>
+					</li>
+
+					<li>
+						<a href="#">
+							<img src="./img/seckill.jpg.webp" alt="">
+						</a>
+						<p>农村乡村别墅,农村别墅三层楼房,艺品专业别墅设计师量身定制设计</p>
+						<div class="sec-price">
+							<i>¥</i>
+							<span>9.99</span>
+						</div>
+					</li>
+
+					<li>
+						<a href="#">
+							<img src="./img/seckill.jpg.webp" alt="">
+						</a>
+						<p>农村乡村别墅,农村别墅三层楼房,艺品专业别墅设计师量身定制设计</p>
+						<div class="sec-price">
+							<i>¥</i>
+							<span>9.99</span>
+						</div>
+					</li>
+				</ul>
+
+				<!--		小轮播图-->
+				<div class="img-brand">
+					小轮播图
+					<!--<img src="./img/" alt="">-->
+				</div>
+			</div>
+		</div>
+
+		<!--图片滚动条(发现好货)-->
+
+		<div class="nice-goods">
+			<div class="nice-goods-inner">
+				<!--发现好货图片logo-->
+				<a class="nice-goods-img" style="background-color: #7b20da" href="#">
+					<!--外包装-->
+					<div class="nice-container">
+						<!--上面的字-->
+						<div class="img-text">
+							探索新生活
+							<i></i>
+						</div>
+					</div>
+				</a>
+				<!--图片滚动图-->
+				<div class="goods-img-scroll" style="background-color: #116ce9">
+					<div class="goods-list">
+						<div class="goods-img-item">
+							<a class="goods-text" href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class="goods-text" href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class=goods-text href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class=goods-text href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class="goods-text" href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class="goods-text" href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class="goods-text" href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class="goods-text" href="#"></a>
+							<a href="#"></a>
+						</div>
+						<div class="goods-img-item">
+							<a class="goods-text" href="#"></a>
+							<a href="#"></a>
+						</div>
+
+					</div>
+					<!--滚轴-->
+					<div class="scroll-bar">
+						<!--滚轮-->
+						<span class="scroll-points"></span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</main>
+
+	<footer>
+		<!--标语-->
+		<div class="mod_service">
+			<div>
+				<ul>
+					<li>
+						<div>
+							<p>品类齐全，轻松购物</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>多仓直发，极速配送</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>正品行货，精致服务</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>天天低价，畅选无忧</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--帮助-->
+		<div class="mod_help">
+			<div class="inner">
+				<div>
+					<dl>
+						<dt>购物指南</dt>
+						<dd><a href="#">购物流程</a></dd>
+						<dd><a href="#">会员介绍</a></dd>
+						<dd><a href="#">生活旅行</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">大家电</a></dd>
+						<dd><a href="#">联系客服</a></dd>
+					</dl>
+				</div>
+				<div>
+					<dl>
+						<dt>配送方式</dt>
+						<dd><a href="#">上门自提</a></dd>
+						<dd><a href="#">211限时到达</a></dd>
+						<dd><a href="#">配送服务查询</a></dd>
+						<dd><a href="#">配送费收取标准</a></dd>
+						<dd><a href="#">海外配送</a></dd>
+					</dl>
+				</div>
+				<div>
+					<dl>
+						<dt>支付方式</dt>
+						<dd><a href="#">货到付款</a></dd>
+						<dd><a href="#">在线支付</a></dd>
+						<dd><a href="#">分期付款</a></dd>
+						<dd><a href="#">公司转账</a></dd>
+					</dl>
+				</div>
+				<div>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="#">售后政策</a></dd>
+						<dd><a href="#">价格保护</a></dd>
+						<dd><a href="#">退款说明</a></dd>
+						<dd><a href="#">返修/退换货</a></dd>
+						<dd><a href="#">取消订单</a></dd>
+					</dl>
+				</div>
+				<div>
+					<dl>
+						<dt>特色服务</dt>
+						<dd><a href="#">夺宝岛</a></dd>
+						<dd><a href="#">DIY装机</a></dd>
+						<dd><a href="#">延保服务</a></dd>
+						<dd><a href="#">京东E卡</a></dd>
+						<dd><a href="#">京东通信</a></dd>
+						<dd><a href="#">京鱼座智能</a></dd>
+					</dl>
+				</div>
+				<div>
+					<dl>
+						<dt style="width: 200px; text-align: center">京东自营覆盖区县</dt>
+						<dd style="width: 180px;margin: 0 auto;">京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</dd>
+						<dd style="text-align: right"><a href="#">查看详细 ></a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!--友情链接-->
+		<div class="mod_copyright"></div>
+
+	</footer>
+
+</body>
+
+</html>
