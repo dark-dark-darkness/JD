@@ -322,6 +322,11 @@ main {
   background-color: #F4F4F4;
   border-top: #f4f4f4 1px solid;
 
+  >div{
+    width: @wid;
+    margin: 0 auto;
+  }
+
   //第一个框
   .top {
     margin-top: 5px;
@@ -1094,10 +1099,6 @@ footer {
           &:nth-child(4) p::before {
             background-position-x: -123px;
           }
-        }
-
-        &:nth-child(n) .word {
-          //background-position: -(n-1)*41 -192px;
         }
       }
     }
