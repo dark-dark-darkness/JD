@@ -322,7 +322,7 @@ main {
   background-color: #F4F4F4;
   border-top: #f4f4f4 1px solid;
 
-  >div{
+  >div {
     width: @wid;
     margin: 0 auto;
   }
@@ -335,13 +335,14 @@ main {
     height: 470px;
 
     //左侧伸缩广告
-    .left {
-      width: 200px;
+    // .left {
+    //   width: 200px;
+    //   overflow: hidden;
 
-      .a {
-        display: block;
-      }
-    }
+    //   .a {
+    //     display: block;
+    //   }
+    // }
 
     //左侧导航栏
     .nav {
@@ -788,6 +789,7 @@ main {
       display: flex;
       width: @wid;
       margin: 30px auto 20px;
+      position: relative;
 
       // 秒杀时间
       .sec-kill-time {
@@ -798,6 +800,7 @@ main {
         background-position: 50%;
         background-size: cover;
         color: #fff;
+        flex: none;
 
         .kill,
         .tm,
@@ -834,7 +837,7 @@ main {
 
         }
 
-        .brand {}
+        // .brand {}
       }
 
       // 秒杀商品
@@ -842,6 +845,7 @@ main {
         display: flex;
         width: 800px;
         height: 100%;
+        flex: none;
 
         li {
           width: 200px;
@@ -916,11 +920,157 @@ main {
         }
       }
 
+      //小轮播图
       .img-brand {
         width: 200px;
         height: 260px;
         background-color: #CCC;
+        flex: none;
       }
+
+      //外侧导航条
+      .elevator {
+        width: 58px;
+        // height: 348px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: 615px;
+
+
+        z-index: 99999;
+
+        //列表
+        .elevator-list {
+          display: flex;
+          flex-direction: column;
+
+          //列表项
+          .elevator-item {
+            position: relative;
+            // width: 58px;
+            height: 58px;
+
+            //项外包装
+            >a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              // text-align: center;
+              transition: background .2s ease;
+              position: relative;
+
+              //文字
+              >div {
+                position: absolute;
+                width: 28px;
+                height: 38px;
+                display: block;
+                margin: auto 0;
+                left: 15px;
+                top: 8px;
+                font-size: 14px;
+                color: #333;
+              }
+
+            }
+
+            //鼠标移入后
+            &:hover {
+              //变红
+              background-color: #c81623;
+
+              //字变白
+              >a>div {
+                color: #fff;
+              }
+
+              //边线消失
+              &::after {
+                opacity: 0;
+              }
+            }
+
+            //元素中间的小黑条 
+            &::after {
+              content: "";
+              position: absolute;
+              display: inline-block;
+              width: 40px;
+              height: 1px;
+              left: 50%;
+              bottom: 0;
+              margin-left: -20px;
+              background-color: #333;
+              background: linear-gradient(270deg, white, #eeeeee, #eeeeee, white);
+              z-index: 99999;
+            }
+
+            &last-child::after {
+              opacity: 0;
+            }
+          }
+
+          .elevator-active>a>div {
+            color: #f00;
+          }
+
+        }
+
+        //回到顶部
+        .elevator-totop {
+          display: block;
+          width: 58px;
+          height: 0;
+          // padding-top: 10px;
+          text-align: center;
+          position: relative;
+          transition: height .5s;
+          overflow: hidden;
+
+          //小箭头(红方块代替)
+          ::before {
+            content: "";
+            width: 100%;
+            height: 22px;
+            display: block;
+            background-color: #c81623;
+
+          }
+
+          div {
+            // position: absolute;
+            // left: 15px;
+            // top: 18px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #e12518;
+
+          }
+
+          //鼠标移入后
+          &:hover {
+            //变红
+            background-color: #c81623;
+
+            //字变白
+            >div {
+              color: #fff;
+            }
+          }
+
+        }
+
+      }
+
+      .elevator-fixed {
+        position: fixed;
+        top: 75px;
+        transition: top .5s;
+        left: 50%;
+      }
+
     }
   }
 
