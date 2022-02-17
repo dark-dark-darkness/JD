@@ -61,6 +61,7 @@ a {
       .dropdown-layer {
         display: none;
         width: 300px;
+        z-index: 9999;
         position: absolute;
         background-color: #fff;
         box-shadow: 1px 2px 1px rgb(0 0 0 / 10%);
@@ -187,7 +188,6 @@ header {
       .search {
         height: 60px;
         position: relative;
-        z-index: 9999;
         width: 752px;
 
         .search-form {
@@ -1112,7 +1112,7 @@ main {
           display: block;
           width: 58px;
           height: 0;
-          // padding-top: 10px;
+          padding-top: 10px;
           text-align: center;
           position: relative;
           transition: height .5s;

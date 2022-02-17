@@ -24,19 +24,19 @@ function imgTurn(curIndex, nextIndex, imgList) {
 	imgList[nextIndex].style.opacity = "1";
 	points[curIndex].className = "";
 	points[nextIndex].className = "active";
-	
+
 }
 
 //自动换图功能
 window.setInterval(() => {
-	                   if (run) {//如果未暂停
-		                   let next = (cur + 1) % imgNumber;
-		                   imgTurn(cur, next, imgList);
-		                   cur = next;
-		                   // console.log(cur);
-	                   }
-                   },
-                   2000
+	if (run) {//如果未暂停
+		let next = (cur + 1) % imgNumber;
+		imgTurn(cur, next, imgList);
+		cur = next;
+		// console.log(cur);
+	}
+},
+	2000
 );
 
 //上一个按钮事件
@@ -75,7 +75,7 @@ points.forEach((p, index) => {
 //数字转字符串补0函数
 function padNumber(number, fill) {
 	let new_number = number * (number > 0 ? 1 : -1),
-	    len        = ('' + new_number).length;
+		len = ('' + new_number).length;
 	return (number >= 0 ? '' : '-') + (Array(
 		fill > len ? fill - len + 1 || 0 : 0
 	).join(0) + new_number);
@@ -185,8 +185,8 @@ window.addEventListener("scroll", function () {
 	if (currentY >= elevatorOffsetTop) {
 		elevator.classList.add('elevator-fixed');
 		searchBox.classList.add("search-fixed");
-		
-		elevatorTotop.style.height = "60px";
+
+		elevatorTotop.style.height = "50px";
 	} else {
 		elevator.classList.remove('elevator-fixed');
 		searchBox.classList.remove("search-fixed");
