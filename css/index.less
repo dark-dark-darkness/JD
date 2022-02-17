@@ -139,7 +139,7 @@ a {
 header {
   background-color: #fff;
 
-  >div {
+  > div {
     display: flex;
     margin: 0 auto;
     width: 1190px;
@@ -180,95 +180,170 @@ header {
 
     //中央
     .center-box {
-      margin-top: 25px;
-      margin-left: 10px;
       flex-grow: 0;
+      overflow: hidden;
+      width: 752px;
 
-      //搜索框
-      .search-form {
-        display: flex;
-        margin-left: 50px;
+      .search {
+        height: 60px;
+        position: relative;
+        z-index: 9999;
+        width: 752px;
 
-        .search-box {
-          border: 2px solid #e2231a;
-          background: #fff;
-          height: 36px;
+        .search-form {
+          //margin-top: 25px;
+          display: flex;
+          margin-left: 60px;
+          position: absolute;
+          bottom: 0;
 
-          input {
-            outline-style: none;
-            border: 1px solid transparent;
-            padding: 2px 44px 2px 17px;
-            width: 425px;
-            // height: 26px;
-            font-size: 12px;
-            font-family: "Microsoft soft";
-            line-height: 26px;
-          }
+          .search-box {
+            border: 2px solid #e2231a;
+            background: #fff;
+            height: 32px;
+            display: flex;
+            width: 546px;
+            position: relative;
 
-          .icon-zhaoxiangji:hover {
-            color: #f00;
-          }
-
-          button {
-            // border-radius: 0;
-            // right: 0;
-            width: 58px;
-            // height: 32px;
-            line-height: 32px;
-            border: none;
-            background-color: #e1251b;
-            font-size: 20px;
-            font-weight: 700;
-            color: #fff;
-            transition: background .2s ease;
-            cursor: pointer;
-
-            &:hover {
-              background-color: #c81623;
+            input {
+              outline-style: none;
+              border: 1px solid transparent;
+              padding: 2px 44px 2px 17px;
+              width: 425px;
+              font-size: 12px;
+              line-height: 26px;
+              margin: auto 0;
             }
+
+            a {
+              width: 19px;
+              height: 15px;
+              display: block;
+              position: absolute;
+              right: 65px;
+              top: 3px;
+
+              &:after {
+                content: "\e663";
+                font-family: "iconfont", serif;
+                display: block;
+                font-size: 18px;
+              }
+
+              &:hover {
+                color: #D6535D;
+              }
+            }
+
+            button {
+              outline-style: none;
+              height: 100%;
+              width: 58px;
+              border-radius: 0;
+              right: 0;
+              line-height: 32px;
+              border: none;
+              background-color: #e1251b;
+              font-size: 20px;
+              font-weight: 700;
+              color: #fff;
+              transition: background .2s ease;
+              position: relative;
+
+              &:before {
+                content: "\e61c";
+                font-family: "iconfont", serif;
+                font-size: 16px;
+                display: block;
+
+              }
+
+              &:hover {
+                background-color: #c81623;
+              }
+
+            }
+
+
           }
 
-        }
-
-        //TODO: 搜索框右边的购物车
-        .shaping-box {
-          border: 1px solid #eee;
-          width: 130px;
-          text-align: center;
-          line-height: 30px;
-          margin: 2px 0 2px 20px;
-          font-weight: 500;
-          color: #c81623;
-          position: relative;
-
-          .dropdown-layer {
-            position: absolute;
-            display: none;
-            border: 1px solid #c81623;
-            width: 308px;
-            height: 100px;
-            right: 0;
-            top: 35px;
-            z-index: 99999;
-            background-color: #fff;
-          }
-
-          &:hover {
-            border-color: #c81623;
-            border-bottom: none;
+          // 搜索框右边的购物车
+          .shaping-box {
+            border: 1px solid #eee;
+            width: 130px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 10px;
+            font-weight: 500;
+            color: #c81623;
+            position: relative;
 
             .dropdown-layer {
-              display: block;
+              position: absolute;
+              display: none;
+              border: 1px solid #c81623;
+              width: 308px;
+              height: 100px;
+              right: 0;
+              top: 35px;
+              z-index: 99999;
+              background-color: #fff;
+            }
+
+            &:hover {
+              border-color: #c81623;
+              border-bottom: none;
+
+              .dropdown-layer {
+                display: block;
+              }
             }
           }
         }
+      }
+
+      .search-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 52px;
+        background-color: #fff;
+        z-index: 999999;
+        border-bottom: 2px solid #f10214;
+        text-align: center;
+        animation: heightChange .5s;
+        overflow: hidden;
+
+        @keyframes heightChange {
+          0% {
+            height: 0;
+          }
+          100% {
+            height: 52px;
+          }
+        }
+        //搜索框
+        .search-inner {
+          margin: 0 auto;
+          width: @wid;
+          height: 50px;
+          bottom: 3px;
+          position: relative;
+
+          .search-form {
+            margin: 0 auto;
+            left: 240px;
+          }
+        }
+
       }
 
       //热搜
       .hot-search-list {
         display: flex;
         font-size: 12px;
-        margin-left: 50px;
+        margin-left: 60px;
         white-space: nowrap;
         margin-top: 5px;
         width: 450px;
@@ -322,7 +397,7 @@ main {
   background-color: #F4F4F4;
   border-top: #f4f4f4 1px solid;
 
-  >div {
+  > div {
     width: @wid;
     margin: 0 auto;
   }
@@ -356,7 +431,7 @@ main {
       flex-shrink: 0;
 
       //选项
-      >ul>li {
+      > ul > li {
         line-height: 25px;
         font-size: 14px;
         padding-left: 18px;
@@ -375,7 +450,7 @@ main {
           box-shadow: 0 2px 5px #ccc;
 
           //黑按钮列表
-          .item-card-left>ul {
+          .item-card-left > ul {
             display: flex;
             margin-left: 20px;
 
@@ -401,11 +476,11 @@ main {
             padding: 10px 0 0 0;
             width: 780px;
 
-            >dl {
+            > dl {
               position: relative;
               padding-left: 80px;
 
-              >dt {
+              > dt {
                 overflow: hidden;
                 position: absolute;
                 left: 0;
@@ -418,17 +493,17 @@ main {
                 //vertical-align: center;
                 margin: auto 0;
 
-                >a {
+                > a {
                   font-size: 12px;
                   color: #333333;
                 }
               }
 
-              >dd {
+              > dd {
                 overflow: hidden;
                 padding: 5px 0;
 
-                >a {
+                > a {
                   float: left;
                   margin: 3px 0;
                   padding: 0 7px;
@@ -455,7 +530,7 @@ main {
         &:hover {
           background-color: #d9d9d9;
 
-          >div {
+          > div {
             display: flex;
           }
         }
@@ -953,7 +1028,7 @@ main {
             height: 58px;
 
             //项外包装
-            >a {
+            > a {
               display: block;
               width: 100%;
               height: 100%;
@@ -962,7 +1037,7 @@ main {
               position: relative;
 
               //文字
-              >div {
+              > div {
                 position: absolute;
                 width: 28px;
                 height: 38px;
@@ -982,7 +1057,7 @@ main {
               background-color: #c81623;
 
               //字变白
-              >a>div {
+              > a > div {
                 color: #fff;
               }
 
@@ -1012,7 +1087,7 @@ main {
             }
           }
 
-          .elevator-active>a>div {
+          .elevator-active > a > div {
             color: #f00;
           }
 
@@ -1055,7 +1130,7 @@ main {
             background-color: #c81623;
 
             //字变白
-            >div {
+            > div {
               color: #fff;
             }
           }
@@ -1178,17 +1253,17 @@ footer {
     //background-color: #bfa;
     border-bottom: #dedede 1px solid;
 
-    >div {
+    > div {
       width: 1190px;
       margin: 0 auto;
 
-      >ul {
+      > ul {
         display: flex;
 
-        >li {
+        > li {
 
           // 多 品类齐全，轻松购物
-          >div {
+          > div {
             display: flex;
             width: 225px;
             line-height: 42px;
@@ -1207,7 +1282,7 @@ footer {
             }
 
             //品类齐全，轻松购物
-            >p {
+            > p {
               overflow: hidden;
               width: 100%;
               font-weight: 700;
@@ -1256,7 +1331,7 @@ footer {
 
   .mod_help {
 
-    >.inner {
+    > .inner {
       width: 1190px;
       //background-color: #fff;
       padding: 20px 0;
@@ -1272,7 +1347,7 @@ footer {
         margin-bottom: 5px;
       }
 
-      dd>a {
+      dd > a {
 
         &:hover {
           color: #f10214;
